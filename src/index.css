@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+:root {
+  background-color: #f9f5f1;
+}
+@layer base {
+  body {
+    @apply font-sans text-[#2E2E2E];
+  }
+}
+@layer components {
+  .title {
+    @apply font-serif text-3xl md:text-4xl font-semibold;
+  }
+}
+h2 {
+  font-family: "Playfair Display", serif;
+}
