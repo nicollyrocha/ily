@@ -1,55 +1,52 @@
-import YouTube, { type YouTubePlayer } from "react-youtube";
-import type { MutableRefObject } from "react";
+import type { RefObject } from "react";
+import YouTube from "react-youtube";
+import type { YouTubePlayer, YouTubeProps } from "react-youtube";
 
-type Props = {
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace YT {
+    interface OnStateChangeEvent {
+      target: YouTubePlayer;
+    }
+  }
+}
+
+interface PlayerProps {
   videoId: string;
-  playerRef: MutableRefObject<YouTubePlayer | null>;
-  playing: boolean;
+  playerRef: RefObject<YouTubePlayer | null>;
   volume: number;
-  onEnd: () => void;
-};
+  onReady?: () => void;
+  onStateChange?: (event: YT.OnStateChangeEvent) => void;
+}
 
 export function YoutubePlayer({
   videoId,
   playerRef,
-  playing,
   volume,
-  onEnd,
-}: Props) {
+  onReady,
+  onStateChange,
+}: PlayerProps) {
+  const opts: YouTubeProps["opts"] = {
+    height: "0",
+    width: "0",
+    playerVars: {
+      autoplay: 0, // 🔥 começa pausado
+      controls: 0,
+      rel: 0,
+      modestbranding: 1,
+    },
+  };
+
   return (
     <YouTube
       videoId={videoId}
-      opts={{
-        height: "0",
-        width: "0",
-        playerVars: {
-          autoplay: 0,
-          controls: 0,
-        },
+      opts={opts}
+      onReady={(e) => {
+        playerRef.current = e.target;
+        e.target.setVolume(volume);
+        onReady?.();
       }}
-      onReady={(event) => {
-        playerRef.current = event.target;
-        event.target.setVolume(volume); // aplica volume inicial
-      }}
-      onStateChange={(event) => {
-        // terminou
-        if (event.data === 0) onEnd();
-
-        // CUED ou PLAYING → reaplica volume
-        if (event.data === 5 || event.data === 1) {
-          event.target.setVolume(volume);
-        }
-
-        // começa a tocar automaticamente se deve
-        if (event.data === 5 && playing) {
-          event.target.playVideo();
-        }
-
-        // pausa se estado não bate
-        if (event.data === 1 && !playing) {
-          event.target.pauseVideo();
-        }
-      }}
+      onStateChange={onStateChange}
     />
   );
 }

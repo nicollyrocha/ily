@@ -1,8 +1,10 @@
+import { Timeline } from "../../components/Timeline";
+
 export const Home = () => {
   return (
-    <div className="p-8">
-      <h2 className="text-3xl font-semibold mb-4">Welcome to ily</h2>
-      <p className="text-lg">Your personal space for thoughts and ideas.</p>
+    <div className="p-8 flex flex-col items-center gap-5">
+      <h2 className="text-3xl font-semibold mb-4">Timeline</h2>
+      <Timeline />
     </div>
   );
 };
