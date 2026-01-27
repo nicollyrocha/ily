@@ -18,6 +18,18 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import timeline1 from "../assets/timeline-1.jpeg";
+import timeline2 from "../assets/timeline-2.jpeg";
+import timeline3 from "../assets/timeline-3.jpeg";
+import timeline4 from "../assets/timeline-4.jpeg";
+import timeline5 from "../assets/timeline-5.jpeg";
+import timeline6 from "../assets/timeline-6.jpeg";
+import timeline7 from "../assets/timeline-7.jpeg";
+import timeline8 from "../assets/timeline-8.jpeg";
+import timeline9 from "../assets/timeline-9.jpeg";
+import timeline10 from "../assets/timeline-10.jpeg";
+import timeline11 from "../assets/timeline-11.jpeg";
+
 export const Timeline = () => (
   <VerticalTimeline>
     <VerticalTimelineElement
@@ -30,11 +42,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Primeira vez que nos falamos
       </h3>
-      <img
-        src="src\assets\timeline-1.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline1} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -46,11 +54,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Dia em que nos assumimos nos stories
       </h3>
-      <img
-        src="src\assets\timeline-2.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline2} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -62,11 +66,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Primeira vez que tiramos foto na academia
       </h3>
-      <img
-        src="src\assets\timeline-3.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline3} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -78,11 +78,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Dia em que começamos a namorar
       </h3>
-      <img
-        src="src\assets\timeline-4.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline4} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -94,11 +90,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Dia em que conheci sua família
       </h3>
-      <img
-        src="src\assets\timeline-5.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline5} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -110,11 +102,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Primeira vez que fui na sua casa durante semana
       </h3>
-      <img
-        src="src\assets\timeline-6.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline6} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -126,11 +114,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Primeiro show que fomos juntos
       </h3>
-      <img
-        src="src\assets\timeline-7.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline7} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -142,11 +126,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Comemorando 2 meses de namoro
       </h3>
-      <img
-        src="src\assets\timeline-8.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline8} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -158,11 +138,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Saindo com seus amigos pela primeira vez
       </h3>
-      <img
-        src="src\assets\timeline-9.jpeg"
-        alt="Placeholder"
-        className="my-4 h-96 rounded-lg"
-      />
+      <img src={timeline9} alt="Placeholder" className="my-4 h-96 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -175,7 +151,7 @@ export const Timeline = () => (
         Indo à praia juntos pela primeira vez
       </h3>
       <img
-        src="src\assets\timeline-10.jpeg"
+        src={timeline10}
         alt="Placeholder"
         className="my-4 h-96 rounded-lg"
       />
@@ -190,11 +166,7 @@ export const Timeline = () => (
       <h3 className="vertical-timeline-element-title">
         Primeiro ano novo juntos
       </h3>
-      <img
-        src="src\assets\timeline-11.jpeg"
-        alt="Placeholder"
-        className="my-4 rounded-lg"
-      />
+      <img src={timeline11} alt="Placeholder" className="my-4 rounded-lg" />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       iconStyle={{ background: "#fad771", color: "#fff" }}

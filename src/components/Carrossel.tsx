@@ -1,41 +1,77 @@
 import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import carrossel1 from "../assets/carrossel-1.jpeg";
+import carrossel2 from "../assets/carrossel-2.jpeg";
+import carrossel3 from "../assets/carrossel-3.jpeg";
+import carrossel4 from "../assets/carrossel-4.jpeg";
+import carrossel5 from "../assets/carrossel-5.jpeg";
+import carrossel6 from "../assets/carrossel-6.jpeg";
+import carrossel7 from "../assets/carrossel-7.jpeg";
+import carrossel8 from "../assets/carrossel-8.jpeg";
+import carrossel9 from "../assets/carrossel-9.jpeg";
+import carrossel10 from "../assets/carrossel-10.jpeg";
+import carrossel11 from "../assets/carrossel-11.jpeg";
+import carrossel12 from "../assets/carrossel-12.jpeg";
+import carrossel13 from "../assets/carrossel-13.jpeg";
+import carrossel14 from "../assets/carrossel-14.jpeg";
+import carrossel15 from "../assets/carrossel-15.jpeg";
+import carrossel16 from "../assets/carrossel-16.jpeg";
+import carrossel17 from "../assets/carrossel-17.jpeg";
+import carrossel18 from "../assets/carrossel-18.jpeg";
+import carrossel19 from "../assets/carrossel-19.jpeg";
+import carrossel20 from "../assets/carrossel-20.jpeg";
+import carrossel21 from "../assets/carrossel-21.jpeg";
+import carrossel22 from "../assets/carrossel-22.jpeg";
+import carrossel23 from "../assets/carrossel-23.jpeg";
+import carrossel24 from "../assets/carrossel-24.jpeg";
+import carrossel25 from "../assets/carrossel-25.jpeg";
+import carrossel26 from "../assets/carrossel-26.jpeg";
+import carrossel27 from "../assets/carrossel-27.jpeg";
+import carrossel28 from "../assets/carrossel-28.jpeg";
+import carrossel29 from "../assets/carrossel-29.jpeg";
+import carrossel30 from "../assets/carrossel-30.jpeg";
+import carrossel31 from "../assets/carrossel-31.jpeg";
+import carrossel32 from "../assets/carrossel-32.jpeg";
+import carrossel33 from "../assets/carrossel-33.jpeg";
+
 const images = [
-  "src/assets/carrossel-1.jpeg",
-  "src/assets/carrossel-2.jpeg",
-  "src/assets/carrossel-3.jpeg",
-  "src/assets/carrossel-4.jpeg",
-  "src/assets/carrossel-5.jpeg",
-  "src/assets/carrossel-6.jpeg",
-  "src/assets/carrossel-7.jpeg",
-  "src/assets/carrossel-8.jpeg",
-  "src/assets/carrossel-9.jpeg",
-  "src/assets/carrossel-10.jpeg",
-  "src/assets/carrossel-11.jpeg",
-  "src/assets/carrossel-12.jpeg",
-  "src/assets/carrossel-13.jpeg",
-  "src/assets/carrossel-14.jpeg",
-  "src/assets/carrossel-15.jpeg",
-  "src/assets/carrossel-16.jpeg",
-  "src/assets/carrossel-17.jpeg",
-  "src/assets/carrossel-18.jpeg",
-  "src/assets/carrossel-19.jpeg",
-  "src/assets/carrossel-20.jpeg",
-  "src/assets/carrossel-21.jpeg",
-  "src/assets/carrossel-22.jpeg",
-  "src/assets/carrossel-23.jpeg",
-  "src/assets/carrossel-24.jpeg",
-  "src/assets/carrossel-25.jpeg",
-  "src/assets/carrossel-26.jpeg",
-  "src/assets/carrossel-27.jpeg",
-  "src/assets/carrossel-28.jpeg",
-  "src/assets/carrossel-29.jpeg",
-  "src/assets/carrossel-30.jpeg",
-  "src/assets/carrossel-31.jpeg",
-  "src/assets/carrossel-32.jpeg",
-  "src/assets/carrossel-33.jpeg",
+  carrossel1,
+  carrossel2,
+  carrossel3,
+  carrossel4,
+  carrossel5,
+  carrossel6,
+  carrossel7,
+  carrossel8,
+  carrossel9,
+  carrossel10,
+  carrossel11,
+  carrossel12,
+  carrossel13,
+  carrossel14,
+  carrossel15,
+  carrossel16,
+  carrossel17,
+  carrossel18,
+  carrossel19,
+  carrossel20,
+  carrossel21,
+  carrossel22,
+  carrossel23,
+  carrossel24,
+  carrossel25,
+  carrossel26,
+  carrossel27,
+  carrossel28,
+  carrossel29,
+  carrossel30,
+  carrossel31,
+  carrossel32,
+  carrossel33,
 ];
+
+// ...rest of the code...
 
 export const Carrossel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
