@@ -19,3 +19,16 @@
 h2 {
   font-family: "Playfair Display", serif;
 }
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg) scale(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) rotate(var(--rotate)) scale(1);
+  }
+}

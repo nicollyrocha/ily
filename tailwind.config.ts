@@ -10,17 +10,17 @@ export default {
       keyframes: {
         pop: {
           "0%": {
+            opacity: "0",
+            transform: "translate(0, 0) scale(0)",
+          },
+          "50%": {
             opacity: "1",
-            transform: "scale(0.4)",
           },
           "100%": {
             opacity: "0",
-            transform: "scale(1.2)",
+            transform: "var(--transform) scale(1)",
           },
         },
-      },
-      animation: {
-        pop: "pop 1.6s ease-out forwards",
       },
     },
   },
