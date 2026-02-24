@@ -5,7 +5,7 @@ import { Motivos } from "./pages/motivos";
 import { Galeria } from "./pages/galeria";
 import { Contador } from "./pages/contador";
 import { Game } from "./pages/game";
-import { Mensagem } from "./pages/mensagem";
+import { Leia } from "./pages/leia";
 
 function App() {
   return (
@@ -16,8 +16,7 @@ function App() {
         <Route path="/galeria" element={<Galeria />} />
         <Route path="/contador" element={<Contador />} />
         <Route path="/game" element={<Game />} />
-        <Route path="/mensagem" element={<Mensagem />} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="/leia" element={<Leia />} />
       </Route>
     </Routes>
   );

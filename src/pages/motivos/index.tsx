@@ -10,9 +10,11 @@ export const Motivos = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center mt-20 md:mt-10">
       {explode && <HeartsAnimation onFinish={() => setExplode(false)} />}
-      <h2 className="text-2xl font-semibold mb-4">Motivos para amar você</h2>
+      <h2 className="text-xl md:text-2xl font-semibold mb-4">
+        Motivos para amar você (clica nos cards)
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 xl:gap-x-10 2xl:gap-x-4 gap-4 p-8">
         <Card className="cursor-pointer" onClick={handleClick}>
           <div className="text-center">Você é incrível</div>

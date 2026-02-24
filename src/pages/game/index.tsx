@@ -100,7 +100,7 @@ export const Game = () => {
         {perguntas[currentIndex] ? (
           <div className="text-center">
             <div className="mb-4">{perguntas[currentIndex].pergunta}</div>
-            <div className="flex gap-5 justify-center">
+            <div className="flex flex-col md:flex-row gap-5 justify-center">
               {perguntas[currentIndex].respostas.map((resposta) => (
                 <Button key={resposta} onClick={() => handleAnswer(resposta)}>
                   {resposta}

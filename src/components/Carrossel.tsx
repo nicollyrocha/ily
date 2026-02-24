@@ -34,6 +34,8 @@ import carrossel30 from "../assets/carrossel-30.jpeg";
 import carrossel31 from "../assets/carrossel-31.jpeg";
 import carrossel32 from "../assets/carrossel-32.jpeg";
 import carrossel33 from "../assets/carrossel-33.jpeg";
+import carrossel34 from "../assets/carrossel-34.jpeg";
+import carrossel35 from "../assets/carrossel-35.jpeg";
 
 const images = [
   carrossel1,
@@ -69,6 +71,8 @@ const images = [
   carrossel31,
   carrossel32,
   carrossel33,
+  carrossel34,
+  carrossel35,
 ];
 
 // ...rest of the code...
@@ -153,7 +157,7 @@ export const Carrossel = () => {
           onTouchEnd={handleTouchEnd}
         >
           {/* Imagens com efeito de deslizamento */}
-          <div className="relative h-[600px] overflow-hidden flex items-center justify-center">
+          <div className="relative h-96 md:h-[600px] overflow-hidden flex items-center justify-center">
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
@@ -163,7 +167,7 @@ export const Carrossel = () => {
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className="min-w-full h-[600px] flex items-center justify-center"
+                  className="min-w-full h-96 md:h-[600px] flex items-center justify-center"
                 >
                   <img
                     src={image}
@@ -176,10 +180,10 @@ export const Carrossel = () => {
             </div>
           </div>
 
-          {/* Botões de navegação */}
+          {/* Botões de navegação - apenas desktop */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition z-10"
+            className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition z-10"
             aria-label="Slide anterior"
           >
             <ChevronLeft size={24} />
@@ -187,7 +191,7 @@ export const Carrossel = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition z-10"
+            className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition z-10"
             aria-label="Próximo slide"
           >
             <ChevronRight size={24} />
@@ -195,7 +199,7 @@ export const Carrossel = () => {
         </div>
 
         {/* Indicadores de slides */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap justify-center">
           {images.map((_, index) => (
             <button
               key={index}

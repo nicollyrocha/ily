@@ -10,7 +10,7 @@ export function MainLayout() {
     <>
       <Header />
 
-      <main className="pt-24">
+      <main className="pt-10 md:pt-24">
         <Outlet />
       </main>
 
